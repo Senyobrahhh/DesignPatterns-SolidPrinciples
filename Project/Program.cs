@@ -1,6 +1,7 @@
 ﻿using Project;
 using Project.OOP_Principles.Abstraction;
-using Project.OOP_Principles.Inheritance;
+using Project.OOP_Principles.PolyMorphism;
+using Car = Project.OOP_Principles.Inheritance.Car;
 
 //Encapsulation
 
@@ -28,5 +29,17 @@ car.NumberOfDoors = 2;
 car.NumberOfWheels = 4;
 car.Start();
 car.Stop();
+
+// Polymorphism
+
+List<Vehicle> vehicles = new List<Vehicle>();
+vehicles.Add(new Plane{Brand = "Boeing", Model = "737", Year = 2010});
+vehicles.Add(new Motorcycle{Brand = "Ducati", Model = "Monster", Year = 2010});
+
+foreach (var vehicle in vehicles)
+{
+    vehicle.Start();
+    vehicle.Stop();
+}
 
 
