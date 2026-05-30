@@ -1,4 +1,5 @@
 ﻿using Project;
+using Project.OOP_Principles.Abstraction;
 
 //Encapsulation
 
@@ -8,3 +9,11 @@ account.Withdraw(50);
 Console.WriteLine(account.GetBalance());
 account.Deposit(100);
 Console.WriteLine(account.GetBalance());
+
+//Abstraction
+
+EmailService emailService = new EmailService();
+emailService.SendEmail();
+
+//Inheritance
+
