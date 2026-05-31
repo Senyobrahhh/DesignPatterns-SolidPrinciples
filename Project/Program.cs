@@ -1,5 +1,6 @@
 ﻿using Project;
 using Project.OOP_Principles.Abstraction;
+using Project.OOP_Principles.Coupling;
 using Project.OOP_Principles.PolyMorphism;
 using Car = Project.OOP_Principles.Inheritance.Car;
 
@@ -42,4 +43,7 @@ foreach (var vehicle in vehicles)
     vehicle.Stop();
 }
 
+//Coupling
 
+var order = new Order(new EmailSender());
+order.PlaceOrder();
