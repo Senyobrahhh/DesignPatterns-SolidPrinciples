@@ -2,6 +2,7 @@
 using Project.OOP_Principles.Abstraction;
 using Project.OOP_Principles.Coupling;
 using Project.OOP_Principles.PolyMorphism;
+using Project.SOLID.D;
 using Project.SOLID.I;
 using Project.SOLID.L;
 using Car = Project.OOP_Principles.Inheritance.Car;
@@ -79,6 +80,9 @@ Console.WriteLine(circle.Area());
 
 // Dependency inversion principle
 //"High-level modules should not depend on low-level modules. Both should depend on abstractions."
+
+var carr = new Project.SOLID.D.Car(new Engine());
+carr.StartCar();
 
 
 
