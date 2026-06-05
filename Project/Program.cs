@@ -2,6 +2,7 @@
 using Project.OOP_Principles.Abstraction;
 using Project.OOP_Principles.Coupling;
 using Project.OOP_Principles.PolyMorphism;
+using Project.SOLID.L;
 using Car = Project.OOP_Principles.Inheritance.Car;
 
 //Encapsulation
@@ -58,6 +59,21 @@ order.PlaceOrder();
 
 // Open-closed principle
 //"Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification."
+
+// Liskov substitution principle
+//"Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
+
+var rect = new Rectangle{Width = 10, Height = 20};
+Console.WriteLine($"Area of Rectangle: {rect.Area}");
+
+var square = new Square { SideLength = 15 };
+Console.WriteLine($"Area of Square: {square.Area}");
+
+// Interface segregation principle
+//"Clients should not be forced to depend on interfaces that they do not use."
+
+
+
 
 
 
