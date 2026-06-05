@@ -1,6 +1,6 @@
 namespace Project.SOLID.I;
 
-public interface IShape
+public interface IShape3D
 {
     double Area();
     double Volume();

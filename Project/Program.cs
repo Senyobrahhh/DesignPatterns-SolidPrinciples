@@ -2,6 +2,7 @@
 using Project.OOP_Principles.Abstraction;
 using Project.OOP_Principles.Coupling;
 using Project.OOP_Principles.PolyMorphism;
+using Project.SOLID.I;
 using Project.SOLID.L;
 using Car = Project.OOP_Principles.Inheritance.Car;
 
@@ -71,6 +72,13 @@ Console.WriteLine($"Area of Square: {square.Area}");
 
 // Interface segregation principle
 //"Clients should not be forced to depend on interfaces that they do not use."
+
+var circle = new Circle();
+circle.Radius = 10;
+Console.WriteLine(circle.Area());
+
+// Dependency inversion principle
+//"High-level modules should not depend on low-level modules. Both should depend on abstractions."
 
 
 
