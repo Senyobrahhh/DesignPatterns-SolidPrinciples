@@ -1,4 +1,5 @@
 ﻿using Project;
+using Project.Design_Patterns.Behavioral.Memento;
 using Project.OOP_Principles.Abstraction;
 using Project.OOP_Principles.Coupling;
 using Project.OOP_Principles.PolyMorphism;
@@ -83,6 +84,35 @@ Console.WriteLine(circle.Area());
 
 var carr = new Project.SOLID.D.Car(new Engine());
 carr.StartCar();
+
+// Memento
+// Memento pattern is used to save the state of an object and restore it later.
+
+var editor = new Editor();
+var history = new History(editor);
+history.Backup();
+editor.Title = "Test";
+history.Backup();
+editor.Content = "Test content";
+history.Backup();
+editor.Title = "Test 2";
+
+Console.WriteLine("Editor Title:" + editor.Title);
+Console.WriteLine("Content:" + editor.Content);
+
+history.Undo();
+Console.WriteLine("Editor Title:" + editor.Title);
+Console.WriteLine("Content:" + editor.Content);
+
+history.ShowHistory();
+
+history.Undo();
+Console.WriteLine("Editor Title:" + editor.Title);
+Console.WriteLine("Content:" + editor.Content);
+
+history.Undo();
+Console.WriteLine("Editor Title:" + editor.Title);
+Console.WriteLine("Content:" + editor.Content);
 
 
 
